@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/futurecare/static/css/main.e6c13ad2.css",
+    "main.js": "/futurecare/static/js/main.20ce6ee7.js",
+    "static/js/787.0357ec03.chunk.js": "/futurecare/static/js/787.0357ec03.chunk.js",
+    "static/media/women.jpg": "/futurecare/static/media/women.105bc4647c4a720f6073.jpg",
+    "static/media/how.png": "/futurecare/static/media/how.6e46dabac59d87013e86.png",
+    "static/media/scope.jpg": "/futurecare/static/media/scope.87e92be7b1b1622d43ba.jpg",
+    "static/media/logo.png": "/futurecare/static/media/logo.1eff65ff4a1a98c7f96a.png",
+    "index.html": "/futurecare/index.html",
+    "main.e6c13ad2.css.map": "/futurecare/static/css/main.e6c13ad2.css.map",
+    "main.20ce6ee7.js.map": "/futurecare/static/js/main.20ce6ee7.js.map",
+    "787.0357ec03.chunk.js.map": "/futurecare/static/js/787.0357ec03.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.20ce6ee7.js"
+  ]
+}
