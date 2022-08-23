@@ -60,16 +60,39 @@ const PriceShape = styled.div`
   background-color: crimson;
 `;
 
-const App = () => {
+const App2 = () => {
 
 
 
-
+  const smallScreen = window.screen.width <= 480 ? true : false;
   return (
-    
+    <>
+      <Container>
        
-   <NavbarComp /> 
+
+        <Intro />
+        <IntoShape />
+      </Container>
+      <Container>
+        <Feature />
+        <FeatureShape />
+      </Container>
+      <Container>
+        <Service />
+        {!smallScreen && <ServiceShape />}
+      </Container>
+      <Containerb>
+        <Price />
+        <PriceShape />
+      </Containerb>
+     
+      <Container>
+     
+        <Contact />
+        <Footer />
+      </Container>
+    </>
   );
 };
 
-export default App;
+export default App2;

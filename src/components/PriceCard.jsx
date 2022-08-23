@@ -1,26 +1,49 @@
-import React from "react";
-import styled from "styled-components";
+import React,{useEffect} from "react";
+import styled,{css} from "styled-components";
+
+
 
 const Container = styled.div`
-  margin-right: 50px;
-  padding: 20px;
-  -webkit-box-shadow: 0px 0px 17px -11px rgba(0, 0, 0, 0.58);
-  box-shadow: 0px 0px 17px -11px rgba(0, 0, 0, 0.58);
+display: flex;
+flex-direction :row
+height: 100%;
+
+  
+  @media only screen and (max-width: 768px) {
+
+    flex-direction: column;
+  }
+`;
+
+
+const CardContainer = styled.div`
+
+
+  margin-top: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
   background-color: white;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media only screen and (max-width: 768px) {
-    margin-right: 0;
-    margin-bottom: 10px;
-    padding: 10px;
-  }
-`;
+  width: 300px;
+  height: 400px;
+  padding: 5px;
 
-const PriceContainer = styled.div`
-  display: flex;
-  align-items: center;
+  justify-content:space-between;
+
+  top: 10%;
+  left: 0;
+  right: 0;
+ 
+
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+   
+    max-height: 300px;
+  }
 `;
 
 const Price = styled.span`
@@ -30,7 +53,9 @@ const Price = styled.span`
     font-size: 30px;
   }
 `;
-
+const bContainer=styled.div`
+display: flex;
+`;
 const Type = styled.button`
   padding: 10px;
   margin: 10px 0;
@@ -48,7 +73,8 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
-  margin: 30px 0;
+  margin: 10px 0;
+  
   @media only screen and (max-width: 768px) {
     margin: 10px;
     font-size: 12px;
@@ -69,24 +95,64 @@ const Button = styled.button`
     padding: 5px;
   }
 `;
-const Title = styled.h1``;
+const Title = styled.h1`
+font-size:20px;
 
-const PriceCard = ({ price, type }) => {
+`;
+
+const Company=styled.h2`
+font-size:20px;
+font-weight:normal;
+
+`;
+
+const smDesc=styled.li`
+margin: 30px 0;
+@media only screen and (max-width: 768px) {
+  margin: 10px;
+  font-size: 12px;
+}
+`;
+
+
+
+const Shape = css`
+  width: 100%;
+  height: 100%;
+  position: absolute; 
+  top: 0;
+  left: 0;
+  z-index: -1;
+`;
+
+
+const PriceCard = ({ title,company,smDesc,location,salaryfrom,salaryTo }) => {
+
+
+
   return (
     <Container>
-      <Title>Latest Jobs</Title>
-      <PriceContainer>
-        $<Price>{price}</Price>/month
-      </PriceContainer>
-      <Type>{type} Plan</Type>
+      <CardContainer>
+      <Title>{title}</Title>
+      <Company>{company}</Company>
       <List>
-        <ListItem>Jobs</ListItem>
-        <ListItem>Salary</ListItem>
-        <ListItem>Location</ListItem>
-        <ListItem>small descriptions about jobs</ListItem>{" "}
+      <ListItem>{smDesc}</ListItem>{" "}
+        
+        <ListItem><b>Salary :</b> {salaryfrom} - {salaryTo} </ListItem>
+        <ListItem>Location : {location}</ListItem>
+         
       </List>
-      <Button>Apply Now</Button>
-    </Container>
+   
+      <Button>Know More </Button>    
+   
+        </CardContainer>
+      
+        
+      
+</Container>
+
+    
+
   );
 };
 

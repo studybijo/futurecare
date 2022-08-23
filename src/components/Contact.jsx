@@ -1,8 +1,9 @@
-import React from "react";
+import React,{useState} from "react";
 import styled from "styled-components";
 import Map from "../img/map.png";
 import Phone from "../img/phone.png";
 import Send from "../img/send.png";
+import axios from "axios";
 
 const Container = styled.div`
   height: 90%;
@@ -137,6 +138,31 @@ const Text = styled.span`
 `;
 
 const Contact = () => {
+ 
+  const[yourname,setYourname]=useState("")
+  const[email,setEmail]=useState("")
+  const[subject,setSubject]=useState("")
+  const[message,setMessage]=useState("")
+
+
+  function sendData(event){
+    
+    event.preventDefault();
+    axios.post('https://futurecare.herokuapp.com//create',{yourname:yourname,email:email,subject:subject,message:message})
+    .then((res) =>console.log("succefully"))
+    .catch(error => {
+      alert("not send");
+        console.error('There was an error!', error);
+    });
+
+
+
+  
+};
+
+  
+
+
   return (
     <Container>
       <Wrapper>
@@ -146,13 +172,13 @@ const Contact = () => {
           </Title>
           <Form>
             <LeftForm>
-              <Input placeholder="Your Name" />
-              <Input placeholder="Your Email" />
-              <Input placeholder="Subject" />
+              <Input onChange={(e)=>{setYourname(e.target.value)}} name='yourname' value={Input.yourname} placeholder="Your Name" />
+              <Input onChange={(e)=>{setEmail(e.target.value)}} name='email' value={Input.email} placeholder="Your Email" />
+              <Input onChange={(e)=>{setSubject(e.target.value)}} name='subject' value={Input.subject} placeholder="Subject" />
             </LeftForm>
             <RightForm>
-              <TextArea placeholder="Your Message" />
-              <Button>Send</Button>
+              <TextArea onChange={(e)=>{setMessage(e.target.value)}} name='message' value={Input.message} placeholder="Your Message" />
+              <Button onClick={sendData}>Send</Button>
             </RightForm>
           </Form>
         </FormContainer>

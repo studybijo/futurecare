@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled,{css} from "styled-components";
 import How from "../img/how.png";
 import MiniCard from "./MiniCard";
 import Play from "../img/play.png";
@@ -106,11 +106,25 @@ const CloseButton = styled.button`
   right: 5px;
   top: 30%;
 `;
+const Shape = css`
+  width: 100%;
+  height: 100%;
+  position: absolute; 
+  top: 0;
+  left: 0;
+  z-index: -1;
+`;
+
+const ServiceShape = styled.div`
+  ${Shape}
+  clip-path: polygon(0 0, 33% 0%, 33% 100%, 0 100%);
+  background-color: #f88497;
+`;
 
 const Service = () => {
   const [open, setOpen] = useState(false);
   const smallScreen = window.screen.width <= 480 ? true : false;
-  return (
+  return (<>
     <Container>
       <Left>
        
@@ -142,6 +156,8 @@ Service Description
         </Modal>
       )}
     </Container>
+    <ServiceShape />
+    </>
   );
 };
 

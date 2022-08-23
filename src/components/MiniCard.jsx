@@ -1,6 +1,8 @@
-import React from "react";
+import React,{useEffect} from "react";
 import styled from "styled-components";
 import Search from "../img/search.png";
+import {useSelector,useDispatch} from 'react-redux'
+import { getAllJobs } from '../redux/actions/JobActions';
 
 const Container = styled.div`
   width: 100px;
@@ -30,9 +32,22 @@ const Text = styled.span`
 
 
 const MiniCard = () => {
+
+
+  const dispatch=useDispatch()
+  useEffect(()=>{
+    dispatch(getAllJobs())
+  },[])
+  
+  const {jobs}=useSelector(state=>state.jobsReducer)
+
+
+
+
   return (
     <Container>
       <Image src={Search} />
+      <h1>{jobs.length}</h1>
       <Text>Service1 type description</Text>
     </Container>
   );

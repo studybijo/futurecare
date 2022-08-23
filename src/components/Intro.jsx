@@ -1,6 +1,6 @@
 import React from "react";
-import styled from "styled-components";
-import Woman from '../img/scope.jpg'
+import styled,{css} from "styled-components";
+import Woman from '../img/222.jpg'
 import AnimatedShapes from "./AnimatedShapes";
 
 const Container = styled.div`
@@ -94,6 +94,21 @@ const Right = styled.div`
     display: none;
   }
 `;
+const Shape = css`
+  width: 100%;
+  height: 100%;
+  position: absolute; 
+  top: 0;
+  left: 0;
+  z-index: -1;
+`;
+
+const IntoShape = styled.div`
+  ${Shape}
+  clip-path: polygon(67% 0, 100% 0%, 100% 100%, 55% 100%);
+  background-color: crimson;
+`;
+
 
 const Image = styled.img`
     width: 100%;
@@ -101,6 +116,7 @@ const Image = styled.img`
 
 const Intro = () => {
   return (
+    <>
     <Container>
       <Left>
         <Title>Welcome to Future Care Plus</Title>
@@ -115,9 +131,11 @@ const Intro = () => {
           </Contact>
         </Info>
       </Left>
-      <Right><Image src={Woman} style={ {width:"500px",marginTop:"70px" }}/></Right>
+      <Right><Image src={Woman} style={ {width:"650px",marginTop:"70px" ,rightmargin:'10px'}}/></Right>
       <AnimatedShapes/>
     </Container>
+    <IntoShape />
+    </>
   );
 };
 
