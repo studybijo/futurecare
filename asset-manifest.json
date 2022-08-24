@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/futurecaregit/static/css/main.cb096638.css",
-    "main.js": "/futurecaregit/static/js/main.a2d914c5.js",
-    "static/js/787.e266d611.chunk.js": "/futurecaregit/static/js/787.e266d611.chunk.js",
-    "static/media/front.jpg": "/futurecaregit/static/media/front.10f87c3ee3c81626fe96.jpg",
-    "static/media/women.jpg": "/futurecaregit/static/media/women.105bc4647c4a720f6073.jpg",
-    "static/media/elderly.jpg": "/futurecaregit/static/media/elderly.6acff297f2d9702f4b0e.jpg",
-    "static/media/how.png": "/futurecaregit/static/media/how.6e46dabac59d87013e86.png",
-    "static/media/2.jpg": "/futurecaregit/static/media/2.3572ead42f52070d72f5.jpg",
-    "static/media/222.jpg": "/futurecaregit/static/media/222.23282c6f76d8c7bc6984.jpg",
-    "index.html": "/futurecaregit/index.html",
-    "main.cb096638.css.map": "/futurecaregit/static/css/main.cb096638.css.map",
-    "main.a2d914c5.js.map": "/futurecaregit/static/js/main.a2d914c5.js.map",
-    "787.e266d611.chunk.js.map": "/futurecaregit/static/js/787.e266d611.chunk.js.map"
+    "main.css": "/futurecare/static/css/main.cb096638.css",
+    "main.js": "/futurecare/static/js/main.7a6ccc68.js",
+    "static/js/787.e266d611.chunk.js": "/futurecare/static/js/787.e266d611.chunk.js",
+    "static/media/front.jpg": "/futurecare/static/media/front.10f87c3ee3c81626fe96.jpg",
+    "static/media/women.jpg": "/futurecare/static/media/women.105bc4647c4a720f6073.jpg",
+    "static/media/elderly.jpg": "/futurecare/static/media/elderly.6acff297f2d9702f4b0e.jpg",
+    "static/media/how.png": "/futurecare/static/media/how.6e46dabac59d87013e86.png",
+    "static/media/2.jpg": "/futurecare/static/media/2.3572ead42f52070d72f5.jpg",
+    "static/media/222.jpg": "/futurecare/static/media/222.23282c6f76d8c7bc6984.jpg",
+    "index.html": "/futurecare/index.html",
+    "main.cb096638.css.map": "/futurecare/static/css/main.cb096638.css.map",
+    "main.7a6ccc68.js.map": "/futurecare/static/js/main.7a6ccc68.js.map",
+    "787.e266d611.chunk.js.map": "/futurecare/static/js/787.e266d611.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cb096638.css",
-    "static/js/main.a2d914c5.js"
+    "static/js/main.7a6ccc68.js"
   ]
 }
